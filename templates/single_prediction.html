@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .result-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .result-container h1 {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .result-text {
+            font-size: 28px;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .result-text.negative {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Person is:</h1>
+        <div class="result-text {{ 'positive' if result == 'Diabetic' else 'negative' }}">
+            {{ result }}
+        </div>
+    </div>
+</body>
+</html>
